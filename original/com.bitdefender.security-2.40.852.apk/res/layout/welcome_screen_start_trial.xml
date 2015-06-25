@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/background_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/header" layout="@layout/header" />
+    <ImageView android:background="@drawable/background_pattern" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_below="@id/header">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/pattern" />
+                <ImageView android:id="@id/login_flow_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/login_image" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <TextView android:textAppearance="?android:textAppearanceLarge" android:textSize="26.0sp" android:id="@id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="@string/finish_screen_title_promo" />
+            <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="14.0sp" android:textColor="@color/primary_text_white" android:gravity="center" android:id="@id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginBottom="15.0dip" android:text="@string/finish_screen_subtitle_promo" />
+            <LinearLayout android:gravity="fill" android:orientation="vertical" android:id="@id/text_container" android:background="@drawable/finish_message_background" android:layout_width="@dimen/wide_button_min_width" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" style="@style/PCMagPromo">
+                <TextView android:textSize="14.0sp" android:textStyle="italic" android:gravity="left" android:layout_gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/finish_screen_quote" />
+                <TextView android:gravity="bottom|center|right" android:layout_gravity="bottom|center|right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/finish_screen_quote_author" />
+            </LinearLayout>
+            <Button android:id="@id/welcome_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="@string/finish_screen_start_trial" style="@style/BlackWideButton" />
+            <Button android:id="@id/get_full_version" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/finish_screen_get_full_version" style="@style/GreenWideButton" />
+            <Button android:id="@id/have_key_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="@string/finish_screen_have_license" style="@style/BlackWideButton" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

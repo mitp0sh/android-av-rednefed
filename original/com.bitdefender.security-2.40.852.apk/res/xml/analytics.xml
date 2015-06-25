@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ga_trackingId">UA-2819970-42</string>
+    <bool name="ga_autoActivityTracking">true</bool>
+    <bool name="ga_dryRun">false</bool>
+    <bool name="ga_reportUncaughtExceptions">true</bool>
+    <integer name="ga_sessionTimeout">900</integer>
+    <integer name="ga_dispatchPeriod">10</integer>
+    <screenName name="com.bitdefender.security.AboutActivity">About</screenName>
+    <screenName name="com.bitdefender.security.BDMain">BDMain</screenName>
+    <screenName name="com.bitdefender.security.EulaActivity">EULA</screenName>
+    <screenName name="com.bitdefender.security.PromoActivity">Promo</screenName>
+    <screenName name="com.bitdefender.security.antimalware.MalwareActivity">Malware Scanner</screenName>
+    <screenName name="com.bitdefender.security.antimalware.NotifyUserMalware">Notify User Malware</screenName>
+    <screenName name="com.bitdefender.security.antitheft.BaseAntitheftActivity">Base Antitheft Activity</screenName>
+    <screenName name="com.bitdefender.security.login.LoginHelperActivity">Login Helper</screenName>
+    <screenName name="com.bitdefender.security.login.CreateAccountActivity">Create Account</screenName>
+    <screenName name="com.bitdefender.security.login.DeviceNameActivity">Device Name</screenName>
+    <screenName name="com.bitdefender.security.login.ForgotPasswordActivity">Forgot Password</screenName>
+    <screenName name="com.bitdefender.security.login.LinkDeviceActivity">Link Device</screenName>
+    <screenName name="com.bitdefender.security.login.LinkMyBDActivity">Link MyBD</screenName>
+    <screenName name="com.bitdefender.security.login.LinkMyBDExistingActivity">Link MyBD Existing</screenName>
+    <screenName name="com.bitdefender.security.login.WelcomeActivity">Welcome Screen</screenName>
+    <screenName name="com.bitdefender.security.websecurity.WebSecurityActivity">Web Security</screenName>
+    <screenName name="com.bitdefender.security.websecurity.WebSecurityAlert">Web Security Alert</screenName>
+    <screenName name="com.bitdefender.security.RegistrationActivity3">Global Settings</screenName>
+    <screenName name="com.bitdefender.security.antitheft.AntitheftActivityNew">Antitheft Activity New</screenName>
+    <screenName name="com.bitdefender.security.antitheft.BuddyActivity">Buddy Number Screen</screenName>
+    <screenName name="com.bitdefender.security.antitheft.InformationActivity">Antitheft Information</screenName>
+    <screenName name="com.bitdefender.security.antitheft.PasswordActivity">Antitheft Password</screenName>
+    <screenName name="com.bitdefender.security.antitheft.WizzardActivity">Antitheft Wizard</screenName>
+    <screenName name="com.bitdefender.security.clueful.CluefulIntroActivity">Clueful Intro Activity</screenName>
+    <screenName name="com.bitdefender.security.clueful.FilterDialog">Clueful Filter Dialog</screenName>
+    <screenName name="com.bitdefender.security.clueful.PrivacyDialog">Clueful Privacy Dialog</screenName>
+    <screenName name="com.bitdefender.security.clueful.ScoreIncreasedDlg">Clueful Score Increased Dialog</screenName>
+    <screenName name="com.bitdefender.security.clueful.AppsActivity">Clueful Apps Screen</screenName>
+    <screenName name="com.bitdefender.security.clueful.AppDetailsActivity">Clueful App Details Screen</screenName>
+    <screenName name="com.bitdefender.security.applock.ApplockListActivity">App Lock Screen</screenName>
+    <screenName name="com.bitdefender.security.wear.WearNewFeatureActivity">Wear New Feature Activity</screenName>
+    <screenName name="com.bitdefender.security.reports.ReportActivity">Reports Activity</screenName>
+    <screenName name="com.bitdefender.security.applock.DialogAppLock">Applock Dialog</screenName>
+</resources>

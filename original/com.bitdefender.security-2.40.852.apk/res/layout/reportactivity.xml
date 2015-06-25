@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/background_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/header" layout="@layout/header" />
+    <RelativeLayout android:id="@id/tip_layout" android:padding="10.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/header">
+        <TextView android:id="@id/tip_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tip_of_the_week" style="@style/reports_title_row" />
+        <TextView android:id="@id/tip_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/tip_icon" android:layout_below="@id/tip_title" android:layout_alignLeft="@id/tip_title" style="@style/reports_content_row" />
+        <ImageView android:id="@id/tip_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_reports_tip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <ExpandableListView android:id="@id/sections_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@color/transparent" android:scrollingCache="false" android:cacheColorHint="@color/transparent" android:groupIndicator="@drawable/expand_list" android:childDivider="@color/list_divider_color" android:divider="@color/list_divider_color" android:dividerHeight="1.0dip" android:layout_below="@id/tip_layout" />
+</RelativeLayout>

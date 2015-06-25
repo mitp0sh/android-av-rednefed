@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/extend_license" style="@style/PopupOverlayContainer"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/popup_header" layout="@layout/popup_header" />
+    <ScrollView android:id="@id/help_content_container" style="@style/PopupScrollContentContainer">
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:autoLink="web" android:id="@id/premium_content" android:text="@string/alert_premium_feature_anti_theft" style="@style/PopupContent" />
+            <Button android:id="@id/premium_button_activate" android:text="@string/alert_premium_feature_activate_now_trial" style="@style/UpgradeWideButton" />
+            <Button android:id="@id/premium_button_later" android:text="@string/alert_premium_feature_activate_later" style="@style/BlackWideButton" />
+            <View style="@style/SeparatorHorizontalEmpty" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

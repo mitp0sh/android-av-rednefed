@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/preview_scream_text" android:text="@string/preview_scream_text" style="@style/PreviewTextAntitheft" />
+    <Button android:id="@id/preview_scream_button" android:layout_marginTop="@dimen/general_top_margin" android:layout_marginBottom="@dimen/general_bottom_margin" android:text="@string/preview_scream_btn" style="@style/GreenWideButton" />
+</LinearLayout>

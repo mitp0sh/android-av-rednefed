@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/header" android:paddingTop="8.0dip" style="@style/HeaderContainer"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/header_content" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/header_icon" android:src="@drawable/b_icon" style="@style/HeaderIcon" />
+        <TextView android:id="@id/header_text" android:text="@string/app_name" android:layout_centerInParent="true" style="@style/HeaderTitle" />
+        <ToggleButton android:id="@id/header_help_button" style="@style/HeaderHelp" />
+    </RelativeLayout>
+    <View android:layout_marginTop="8.0dip" android:layout_below="@id/header_content" style="@style/SeparatorHorizontalSimple" />
+</RelativeLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/RelativeLayoutLogin" android:background="@color/background_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/header" layout="@layout/header" />
+    <ImageView android:background="@drawable/background_pattern" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_below="@id/header">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/login_main_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/pattern" />
+                <ImageView android:id="@id/login_flow_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/login_image" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <TextView android:id="@id/login_title" android:text="@string/link_device_phone" style="@style/LoginFlowTitle" />
+            <TextView android:textSize="@dimen/login_main_text_size" android:textColor="@color/primary_text_white" android:gravity="center" android:id="@id/login_main_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/general_left_margin" android:layout_marginTop="10.0dip" android:layout_marginRight="@dimen/general_right_margin" android:text="@string/new_login_main_text" />
+            <RelativeLayout android:id="@id/linearLayout_google" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip">
+                <Button android:textSize="@dimen/wide_button_text_size" android:gravity="center" android:id="@id/login_google" android:paddingLeft="5.0dip" android:text="@string/link_one_of_your_google_ids" android:drawableLeft="@drawable/gplus" style="@style/OrangeWideButton" />
+            </RelativeLayout>
+            <Button android:id="@id/login_bitdefender" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/link_my_bitdefender_account" style="@style/GreenWideButton" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

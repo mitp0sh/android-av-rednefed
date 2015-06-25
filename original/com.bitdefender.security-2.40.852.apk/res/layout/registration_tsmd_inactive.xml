@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/extend_license" android:background="@color/upsell_background" android:layout_width="@dimen/popup_dialog_min_width" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/header" layout="@layout/promo_upgrade_header" />
+    <LinearLayout android:orientation="vertical" android:layout_width="@dimen/popup_dialog_min_width" android:layout_height="wrap_content" android:layout_below="@id/header">
+        <TextView android:id="@id/extend_tsmd_content" android:text="@string/LicenseActivity_linking_device_invalid_key" style="@style/PromoTextContent" />
+        <LinearLayout android:orientation="vertical" android:id="@id/extend_btns" android:layout_width="@dimen/popup_dialog_min_width" android:layout_height="wrap_content">
+            <Button android:id="@id/registration_tsmd_inactive_ok" android:layout_width="fill_parent" android:layout_marginTop="5.0dip" android:layout_marginBottom="10.0dip" android:text="@string/LicenseActivity_unlink_device_dialog_ok" style="@style/BlackWideButton" />
+            <View style="@style/SeparatorHorizontalEmpty" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

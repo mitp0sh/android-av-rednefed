@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/relativeLayoutEventViewListRow" android:background="@color/background_black" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="40.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/TextViewEventContent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_toRightOf="@id/event_icon" android:layout_centerVertical="true">
+        <TextView android:id="@id/TextViewDate" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/reports_title_row" />
+        <TextView android:id="@id/TextViewEventMessage" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/reports_content_row" />
+    </LinearLayout>
+    <ImageView android:id="@id/event_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_malwarescanner_titlebar" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+</RelativeLayout>

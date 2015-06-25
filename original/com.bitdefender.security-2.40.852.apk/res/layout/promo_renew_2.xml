@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/upsell_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/header" layout="@layout/promo_renew_header" />
+    <RelativeLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_above="@id/extend_license_market_offer" android:layout_below="@id/header" android:layout_centerInParent="true">
+        <ScrollView style="@style/PromoScrollView">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:id="@id/promo_content_top" android:text="@string/promo_renew_2_top" style="@style/PromoTextContent" />
+                <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textStyle="bold" android:text="@string/promo_0_content_1" style="@style/PromoTextContent" />
+                    <TextView android:text="1" style="@style/PromoTextOfferContent" />
+                    <TextView android:textStyle="bold" android:text="@string/promo_0_content_2" style="@style/PromoTextContent" />
+                </LinearLayout>
+                <include layout="@layout/promo_awards_table" />
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+    <Button android:id="@id/extend_license_market_offer" android:text="@string/promo_renew_button_1_year" style="@style/PromoGreenButton" />
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="center_vertical" android:id="@id/custom_notification" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/custom_notification_image" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="8.0dip" android:src="@drawable/icon_launcher" android:scaleType="fitCenter" android:adjustViewBounds="true" android:layout_centerVertical="true" />
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="7.0dip" android:layout_toRightOf="@id/custom_notification_image" android:layout_centerVertical="true">
+        <TextView android:id="@id/notification_app_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Medium Text" style="@style/CustomNotificationTitle" />
+        <TextView android:id="@id/notification_app_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/notification_app_name" style="@style/CustomNotificationText" />
+    </RelativeLayout>
+</RelativeLayout>

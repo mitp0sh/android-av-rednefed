@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/relativeLayoutLoginInput" android:background="@color/background_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/header" layout="@layout/header" />
+    <ImageView android:background="@drawable/background_pattern" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_below="@id/header">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/create_linear_layout_top_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/pattern" />
+                <ImageView android:id="@id/login_flow_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/login_image" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <TextView android:layout_gravity="center" android:id="@id/create_account_title_text" android:layout_margin="@dimen/title_text_margins" android:text="@string/create_account_screen_title" style="@style/LoginFlowTitle" />
+            <EditText android:id="@id/create_username" android:hint="@string/create_email_address" android:inputType="textEmailAddress" android:imeOptions="actionNext" style="@style/WideInput" />
+            <EditText android:id="@id/create_password" android:hint="@string/create_password_hint" android:inputType="textPassword" android:imeOptions="actionNext" style="@style/WideInput" />
+            <EditText android:id="@id/create_confirm" android:hint="@string/create_password_confirm_hint" android:inputType="textPassword" android:imeOptions="actionGo" style="@style/WideInput" />
+            <Button android:layout_gravity="center_horizontal" android:id="@id/create_register" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/create_account_screen_button" style="@style/GreenWideButton" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:layout_gravity="center" android:background="@color/transparent" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@id/popup_header" android:background="@drawable/notif_grey_header" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="@dimen/popup_dialog_min_width">
+        <TextView android:textSize="@dimen/large_text" android:textColor="@color/primary_text_white" android:id="@id/popup_header_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="WIPE" />
+    </LinearLayout>
+    <ScrollView android:layout_below="@id/popup_header" style="@style/PopupScrollContentContainer">
+        <LinearLayout android:orientation="vertical" android:id="@id/buddy_main_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip">
+            <TextView android:textColor="@color/primary_text_white" android:id="@id/preview_sms_command_item_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/preview_sms_dialog_trusted_number_title" />
+            <TextView android:textStyle="bold" android:textColor="@color/primary_text_white" android:id="@id/preview_sms_command_item_pass" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="BD-xxxx WIPE" />
+            <TextView android:textColor="@color/primary_text_light" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/preview_sms_dialog_pin_text" />
+            <TextView android:textColor="@color/primary_text_black" android:layout_gravity="right" android:id="@id/preview_sms_dialog_speech1" android:background="@drawable/speech11" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/general_top_margin" android:text="BD-1234 WIPE" />
+            <TextView android:textColor="@color/primary_text_black" android:id="@id/preview_sms_dialog_speech2" android:background="@drawable/speech2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/general_top_margin" android:text="@string/bd_sms_full_wipe_started" />
+            <Button android:id="@id/preview_sms_dialog_ok" android:text="@string/preview_ok" style="@style/BlackWideButton" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

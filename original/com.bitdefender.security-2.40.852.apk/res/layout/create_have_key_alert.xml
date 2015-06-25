@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/extend_license" style="@style/PopupOverlayContainer"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/popup_header" layout="@layout/popup_header" />
+    <ScrollView android:id="@id/help_content_container" style="@style/PopupScrollContentContainer">
+        <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <EditText android:id="@id/have_key_edit_text" android:layout_marginTop="@dimen/general_top_margin" android:hint="@string/license_key_hint" style="@style/WideInput" />
+            <Button android:id="@id/have_key_button_validate" android:text="@string/registration_have_key_validate" style="@style/BlackWideButton" />
+            <View style="@style/SeparatorHorizontalEmpty" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

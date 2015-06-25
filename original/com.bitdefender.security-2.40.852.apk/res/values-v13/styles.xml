@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="tableTextUpsell" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">@dimen/medium_large_text</item>
+        <item name="android:textColor">@color/primary_text_black</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@drawable/white_band</item>
+        <item name="android:paddingLeft">@dimen/general_left_margin</item>
+        <item name="android:paddingTop">5.0dip</item>
+        <item name="android:paddingRight">@dimen/general_right_margin</item>
+        <item name="android:paddingBottom">5.0dip</item>
+        <item name="android:layout_marginLeft">@dimen/general_left_margin</item>
+        <item name="android:layout_marginTop">5.0dip</item>
+        <item name="android:layout_marginRight">@dimen/general_right_margin</item>
+        <item name="android:layout_marginBottom">5.0dip</item>
+        <item name="android:drawablePadding">10.0dip</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+    <style name="tableAntiTheftTextUpsell" parent="@style/tableTextUpsell">
+        <item name="android:textAllCaps">false</item>
+    </style>
+    <style name="redBandPromo" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">@dimen/medium_text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/primary_text_white</item>
+        <item name="android:background">@drawable/btn_band_small</item>
+        <item name="android:layout_marginBottom">-20.0dip</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/help_dialog" style="@style/PopupOverlayContainer"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/popup_header" layout="@layout/popup_header" />
+    <ScrollView android:id="@id/help_content_container" style="@style/PopupScrollContentContainer">
+        <LinearLayout android:gravity="center" android:layout_gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:id="@id/help_content" android:text="@string/help_buddy_content" style="@style/PopupContent" />
+            <Button android:id="@id/help_btn_ok" android:text="@string/help_content_ok" style="@style/BlackWideButton" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

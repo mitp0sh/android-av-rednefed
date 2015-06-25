@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:id="@id/scroll_view_web_controls" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/footer" android:layout_alignParentTop="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:orientation="vertical" android:id="@id/web_control_commands_content" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <View style="@style/SeparatorHorizontalSimple" />
+                    <LinearLayout android:orientation="vertical" android:id="@id/locate_content_view" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <RelativeLayout android:id="@id/locate_preview_header" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                            <ImageView android:id="@id/locate_close_icon" style="@style/close_icon" />
+                            <ImageView android:id="@id/locate_expand_icon" style="@style/open_icon" />
+                            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/web_geolocate_button" android:layout_centerVertical="true">
+                                <TextView android:id="@id/settings_geolocate_text" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:text="@string/settings_geolocate_text" style="@style/ToggleLabel" />
+                                <TextView android:textColor="@color/primary_text_red" android:id="@id/settings_geolocate_status_error" android:paddingBottom="10.0dip" android:visibility="gone" android:text="@string/preview_locate_location_error" style="@style/ToggleLabel" />
+                            </LinearLayout>
+                            <com.bitdefender.security.ui.BDToggleButton android:id="@id/web_geolocate_button" style="@style/ToggleOnOff" />
+                        </RelativeLayout>
+                        <include android:id="@id/preview_locate" android:visibility="gone" layout="@layout/preview_locate" />
+                    </LinearLayout>
+                    <View style="@style/SeparatorHorizontalSimple" />
+                    <LinearLayout android:orientation="vertical" android:id="@id/lock_content_view" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <RelativeLayout android:id="@id/lock_preview_header" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                            <ImageView android:id="@id/lock_close_icon" style="@style/close_icon" />
+                            <ImageView android:id="@id/lock_expand_icon" style="@style/open_icon" />
+                            <TextView android:id="@id/settings_lock_text" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:text="@string/settings_lock_text" android:layout_toLeftOf="@id/web_lock_button" style="@style/ToggleLabel" />
+                            <com.bitdefender.security.ui.BDToggleButton android:id="@id/web_lock_button" style="@style/ToggleOnOff" />
+                        </RelativeLayout>
+                        <include android:id="@id/preview_lock" android:visibility="gone" layout="@layout/preview_lock" />
+                    </LinearLayout>
+                    <View style="@style/SeparatorHorizontalSimple" />
+                    <LinearLayout android:orientation="vertical" android:id="@id/wipe_content_view" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <RelativeLayout android:id="@id/wipe_preview_header" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                            <ImageView android:id="@id/wipe_close_icon" style="@style/close_icon" />
+                            <ImageView android:id="@id/wipe_expand_icon" style="@style/open_icon" />
+                            <TextView android:id="@id/settings_wipe_text" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:text="@string/settings_wipe_text" android:layout_toLeftOf="@id/web_wipe_button" style="@style/ToggleLabel" />
+                            <com.bitdefender.security.ui.BDToggleButton android:id="@id/web_wipe_button" style="@style/ToggleOnOff" />
+                        </RelativeLayout>
+                        <include android:id="@id/preview_wipe" android:visibility="gone" layout="@layout/preview_wipe" />
+                    </LinearLayout>
+                    <View style="@style/SeparatorHorizontalSimple" />
+                    <LinearLayout android:orientation="vertical" android:id="@id/scream_content_view" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <RelativeLayout android:id="@id/scream_preview_header" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                            <ImageView android:id="@id/scream_close_icon" style="@style/close_icon" />
+                            <ImageView android:id="@id/scream_expand_icon" style="@style/open_icon" />
+                            <TextView android:id="@id/settings_scream_text" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:text="@string/settings_scream_text" style="@style/ToggleLabel" />
+                            <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/general_right_margin" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/AlwaysON" />
+                        </RelativeLayout>
+                        <include android:id="@id/preview_scream" android:visibility="gone" layout="@layout/preview_scream" />
+                    </LinearLayout>
+                    <View style="@style/SeparatorHorizontalSimple" />
+                </LinearLayout>
+                <ImageView android:id="@id/web_control_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/overlay_disable" android:scaleType="fitXY" android:layout_alignTop="@id/web_control_commands_content" android:layout_alignBottom="@id/web_control_commands_content" />
+            </RelativeLayout>
+            <TextView android:textSize="@dimen/medium_text" android:gravity="left" android:id="@id/web_controls_description" android:layout_marginTop="@dimen/general_top_margin" android:text="@string/web_controls_description" style="@style/MainText" />
+            <Button android:id="@id/web_controls_activate_antitheft" android:layout_marginTop="@dimen/general_top_margin" android:text="@string/main_screen_activate_button" style="@style/GreenWideButton" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:orientation="vertical" android:id="@id/footer" android:background="@color/dark_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <View style="@style/SeparatorHorizontalSimple" />
+        <RelativeLayout android:gravity="center" android:id="@id/web_red_notification_background_data" android:background="@color/primary_text_red" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip">
+            <TextView android:textSize="12.0sp" android:textColor="@color/primary_text_white" android:gravity="center_horizontal" android:id="@id/red_notification_back_data_text" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/web_background_data_warning" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <RelativeLayout android:gravity="center" android:id="@id/web_red_notification_c2dm" android:background="@color/primary_text_red" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip">
+            <TextView android:textSize="12.0sp" android:textColor="@color/primary_text_white" android:gravity="center_horizontal" android:id="@id/red_notification_c2dm_text" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/web_c2dm_warning" android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

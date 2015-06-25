@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/dark_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/header" layout="@layout/header" />
+    <ProgressBar android:id="@id/progress" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:indeterminate="true" android:indeterminateOnly="true" android:layout_below="@id/header" style="@style/IndeterminateProgress" />
+    <LinearLayout android:orientation="vertical" android:id="@id/description_container" android:background="@color/background_color" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="3.0dip" android:layout_below="@id/progress">
+        <TextView android:id="@id/description" android:layout_marginTop="15.0dip" android:layout_marginBottom="15.0dip" android:text="@string/set_pin_dialog_title" style="@style/MainText" />
+        <Button android:id="@id/pin" android:layout_marginBottom="15.0dip" android:text="@string/applock_set_pin" style="@style/OrangeWideButton" />
+    </LinearLayout>
+    <ListView android:id="@id/list" android:layout_width="wrap_content" android:layout_height="fill_parent" android:listSelector="@color/transparent" android:cacheColorHint="@color/transparent" android:divider="@color/list_divider_color" android:dividerHeight="1.0dip" android:layout_below="@id/description_container" />
+    <View android:id="@id/gray_overlay" android:background="@color/help_overlay_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/description_container" />
+</RelativeLayout>

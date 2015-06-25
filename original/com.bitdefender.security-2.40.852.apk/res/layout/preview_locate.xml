@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/preview_locate_text" android:text="@string/preview_locate_location_disabled_text" style="@style/PreviewTextAntitheft" />
+    <RelativeLayout android:id="@id/preview_map_content" android:layout_width="fill_parent" android:layout_height="200.0dip" android:layout_marginTop="@dimen/general_top_margin">
+        <fragment android:id="@id/preview_locate_map" android:layout_width="fill_parent" android:layout_height="fill_parent" class="com.google.android.gms.maps.SupportMapFragment" />
+        <ImageView android:id="@id/preview_locate_transparent_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@color/transparent" />
+    </RelativeLayout>
+    <Button android:id="@id/preview_locate_activate_location_button" android:layout_marginTop="@dimen/general_top_margin" android:layout_marginBottom="@dimen/general_bottom_margin" android:text="@string/preview_locate_btn_activate_location" style="@style/GreenWideButton" />
+</LinearLayout>

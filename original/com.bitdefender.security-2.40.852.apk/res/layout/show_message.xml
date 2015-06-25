@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/send_message" android:background="@color/background_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="15.0sp" android:textColor="@android:color/white" android:gravity="center_horizontal" android:id="@id/textViewAntitheftShowMessage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:text="" android:singleLine="false" android:layout_centerHorizontal="true" />
+    <Button android:textSize="15.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:id="@id/ImgBtnShowMessageOK" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:text="@string/antitheft_message_web_ok" android:layout_below="@id/textViewAntitheftShowMessage" android:layout_centerHorizontal="true" style="@style/BlackWideButton" />
+    <TextView android:textSize="3.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_below="@id/ImgBtnShowMessageOK" />
+</RelativeLayout>

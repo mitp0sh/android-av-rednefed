@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:id="@id/toast_layout_root" android:background="#ddaaaaaa" android:padding="3.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/ToastImage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:layout_centerVertical="true" />
+    <TextView android:textColor="@color/primary_text_white" android:id="@id/ToastText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/ToastImage" android:layout_centerVertical="true" />
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="wide_button_text_size">17.0sp</dimen>
+    <dimen name="dashboard_grid_text_size">16.0sp</dimen>
+    <dimen name="label_text_size">17.0sp</dimen>
+    <dimen name="settings_label_text_size">19.0sp</dimen>
+    <dimen name="main_text_size">17.0sp</dimen>
+    <dimen name="login_flow_title_size">20.0sp</dimen>
+    <dimen name="login_main_text_size">17.0sp</dimen>
+    <dimen name="small_xlarge_text">28.0sp</dimen>
+    <dimen name="large_xlarge_text">24.0dip</dimen>
+    <dimen name="xlarge_text">26.0dip</dimen>
+    <dimen name="large_text">21.0sp</dimen>
+    <dimen name="medium_text">17.0sp</dimen>
+    <dimen name="medium_large_text">19.0sp</dimen>
+    <dimen name="small_medium_text">16.0sp</dimen>
+    <dimen name="small_text">14.0sp</dimen>
+    <dimen name="popup_dialog_min_width">420.0dip</dimen>
+</resources>

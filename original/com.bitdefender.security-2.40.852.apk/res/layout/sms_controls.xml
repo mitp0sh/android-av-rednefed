@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:orientation="vertical" android:id="@id/sms_control_commands_content" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <View style="@style/SeparatorHorizontalSimple" />
+                    <LinearLayout android:orientation="vertical" android:id="@id/sms_commands_content_view" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <RelativeLayout android:id="@id/sms_commands_header" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                            <ImageView android:id="@id/sms_commands_close_icon" style="@style/close_icon" />
+                            <ImageView android:id="@id/sms_commands_expand_icon" style="@style/open_icon" />
+                            <TextView android:id="@id/settings_sms_text" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:text="@string/settings_sms_text" android:layout_toLeftOf="@id/sms_sms_button" style="@style/ToggleLabel" />
+                            <com.bitdefender.security.ui.BDToggleButton android:id="@id/sms_sms_button" style="@style/ToggleOnOff" />
+                        </RelativeLayout>
+                        <include android:id="@id/preview_sms_commands" android:visibility="gone" layout="@layout/preview_sms_commands" />
+                    </LinearLayout>
+                    <View style="@style/SeparatorHorizontalSimple" />
+                    <LinearLayout android:orientation="vertical" android:id="@id/sim_change_content_view" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <RelativeLayout android:id="@id/sim_change_header" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                            <ImageView android:id="@id/sim_change_close_icon" style="@style/close_icon" />
+                            <ImageView android:id="@id/sim_change_expand_icon" style="@style/open_icon" />
+                            <TextView android:id="@id/settings_sim_change_text" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:text="@string/settings_sim_change_text" android:layout_toLeftOf="@id/settings_sim_change_state" style="@style/ToggleLabel" />
+                            <Button android:id="@id/settings_sim_change_state" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/general_right_margin" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/AlwaysON" />
+                        </RelativeLayout>
+                        <include android:id="@id/preview_sim_change" android:visibility="gone" layout="@layout/preview_sim_change" />
+                    </LinearLayout>
+                    <View style="@style/SeparatorHorizontalSimple" />
+                    <LinearLayout android:orientation="vertical" android:id="@id/trusted_number_content_view" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <RelativeLayout android:id="@id/trusted_number_header" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                            <ImageView android:id="@id/trusted_number_close_icon" style="@style/close_icon" />
+                            <ImageView android:id="@id/trusted_number_expand_icon" style="@style/open_icon" />
+                            <TextView android:id="@id/trusted_number_text" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:text="@string/settings_trusted_number_text" style="@style/ToggleLabel" />
+                        </RelativeLayout>
+                        <include android:id="@id/preview_trusted_number" android:visibility="gone" layout="@layout/preview_trusted_number" />
+                    </LinearLayout>
+                    <View style="@style/SeparatorHorizontalSimple" />
+                </LinearLayout>
+                <ImageView android:id="@id/sms_control_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/overlay_disable" android:scaleType="fitXY" android:layout_alignTop="@id/sms_control_commands_content" android:layout_alignBottom="@id/sms_control_commands_content" />
+            </RelativeLayout>
+            <TextView android:textSize="@dimen/medium_text" android:textColor="@color/primary_text_orange" android:gravity="left" android:id="@id/sms_controls_description" android:layout_marginTop="@dimen/general_top_margin" android:text="@string/sms_controls_description" android:drawableLeft="@drawable/attention" android:drawablePadding="@dimen/general_right_margin" style="@style/MainText" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

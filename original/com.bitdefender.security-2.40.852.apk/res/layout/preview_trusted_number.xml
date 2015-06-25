@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textColor="@color/primary_text_red" android:id="@id/preview_trusted_number_warning" android:text="@string/preview_trusted_number_not_set_warning" style="@style/PreviewTextAntitheft" />
+    <TextView android:id="@id/preview_trusted_number_text" android:layout_marginTop="0.0dip" android:text="@string/preview_trusted_number_not_set_text" style="@style/PreviewTextAntitheft" />
+    <Button android:id="@id/preview_trusted_number_btn" android:layout_marginTop="@dimen/general_top_margin" android:layout_marginBottom="@dimen/general_bottom_margin" android:text="@string/settings_buddy_number_button" style="@style/GreenWideButton" />
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/dialog_promo_bms_3m" style="@style/PopupOverlayContainer"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/popup_header" layout="@layout/popup_header" />
+    <ScrollView android:id="@id/help_content_container" style="@style/PopupScrollContentContainer">
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:text="@string/promo_bms_from_avfree_text" style="@style/PopupContent" />
+            <Button android:id="@id/promo_bms_3m_btn" android:text="@string/promo_bms_from_avfree_ok" style="@style/BlackWideButton" />
+            <View style="@style/SeparatorHorizontalEmpty" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/appLockNotificationContainer" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="50.0dip" android:layout_height="50.0dip">
+        <ImageView android:id="@id/imgIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_status" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="?android:dividerHorizontal">
+        <LinearLayout android:orientation="vertical" android:id="@id/textContainer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip">
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/tvTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Medium Text" />
+            <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/tvContent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Small Text" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="?android:dividerVertical">
+            <RelativeLayout android:id="@id/btnLock" android:background="@drawable/sdk_notification_button" android:layout_width="wrap_content" android:layout_height="45.0dip" android:layout_weight="0.5">
+                <TextView android:textAppearance="?android:textAppearanceMedium" android:gravity="center_vertical" android:id="@id/tvLock" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="5.0dip" android:text="_Lock" android:drawableLeft="@drawable/alert_lock" android:layout_weight="0.5" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/btnNever" android:background="@drawable/sdk_notification_button" android:layout_width="wrap_content" android:layout_height="45.0dip" android:layout_weight="0.5">
+                <TextView android:textAppearance="?android:textAppearanceMedium" android:gravity="center_vertical" android:id="@id/tvNever" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="5.0dip" android:text="_Never" android:drawableLeft="@drawable/alert_x" android:layout_weight="0.5" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

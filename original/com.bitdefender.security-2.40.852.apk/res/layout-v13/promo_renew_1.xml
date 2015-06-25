@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/upsell_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/header" layout="@layout/promo_renew_header" />
+    <RelativeLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_above="@id/extend_btns" android:layout_below="@id/header" android:layout_centerInParent="true">
+        <ScrollView android:requiresFadingEdge="none" style="@style/PromoScrollView">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:id="@id/promo_content_top" android:text="@string/promo_renew_1_top" style="@style/PromoTextContent" />
+                <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:id="@id/promo_days_left_1" android:text="0" style="@style/PromoTextOfferContent" />
+                    <TextView android:id="@id/promo_days_left_2" android:text="0" style="@style/PromoTextOfferContent" />
+                    <TextView android:textStyle="bold" android:text="@string/promo_renew_1_top_2" style="@style/PromoTextContent" />
+                </LinearLayout>
+                <TextView android:text="@string/promo_renew_1_top_3" style="@style/PromoTextContent" />
+                <include layout="@layout/promo_awards_table" />
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/extend_btns" android:layout_width="@dimen/popup_dialog_min_width" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <Button android:id="@id/extend_license_market_offer" android:layout_width="fill_parent" android:text="@string/upsell_subscription_1_year" android:layout_below="@id/promo_offer_img" style="@style/PromoGreenRedButton" />
+            <TextView android:id="@id/promo_offer_img" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/red_band_offer_subscription_1year" android:layout_alignRight="@id/extend_license_market_offer" style="@style/redBandPromo" />
+        </RelativeLayout>
+        <Button android:id="@id/extend_license_market_1_month" android:layout_width="fill_parent" android:text="@string/upsell_subscription_1_month" style="@style/PromoGreenButton" />
+    </LinearLayout>
+</RelativeLayout>

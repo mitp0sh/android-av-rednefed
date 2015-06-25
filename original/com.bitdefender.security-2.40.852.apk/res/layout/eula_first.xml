@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/header" />
+    <WebView android:scrollbarAlwaysDrawHorizontalTrack="false" android:scrollbarAlwaysDrawVerticalTrack="false" android:scrollbarStyle="outsideOverlay" android:id="@id/eula_webView2" android:background="#ff292929" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <LinearLayout android:orientation="horizontal" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <CheckBox android:textSize="13.0sp" android:id="@id/eula_first_accept_checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/general_left_margin" android:layout_marginRight="10.0dip" android:checked="true" android:button="@drawable/checkbox_states" android:layout_centerVertical="true" />
+            <TextView android:textColor="@color/primary_text_white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/general_right_margin" android:text="@string/send_log_message_accept" android:layout_toRightOf="@id/eula_first_accept_checkbox" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:textSize="14.0sp" android:layout_gravity="center_vertical" android:id="@id/btn_refuseEula" android:layout_width="fill_parent" android:layout_marginLeft="2.5dip" android:layout_marginRight="@dimen/general_left_margin" android:text="@string/eula_first_run_ignore" android:layout_weight="1.0" style="@style/BlackWideButton" />
+        <Button android:textSize="14.0sp" android:layout_gravity="center_vertical" android:id="@id/btn_acceptEula" android:layout_width="fill_parent" android:layout_marginLeft="@dimen/general_right_margin" android:layout_marginRight="2.5dip" android:text="@string/eula_first_run_accept" android:layout_weight="1.0" style="@style/GreenWideButton" />
+    </LinearLayout>
+</LinearLayout>

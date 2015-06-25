@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.bitdefender.security" platformBuildVersionCode="20" platformBuildVersionName="4.4W.2-1537038">
+    <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true" android:xlargeScreens="true"/>
+    <uses-feature android:name="android.hardware.telephony" android:required="false"/>
+    <uses-feature android:name="android.hardware.location" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.network" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.gps" android:required="false"/>
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
+    <uses-feature android:name="android.hardware.bluetooth" android:required="false"/>
+    <uses-feature android:glEsVersion="0x20000" android:required="false"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="com.android.browser.permission.WRITE_HISTORY_BOOKMARKS"/>
+    <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.WRITE_SMS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="com.android.vending.BILLING"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="com.bitdefender.security.CHECK_STATUS"/>
+    <uses-permission android:name="com.bitdefender.settings.bms.permission"/>
+    <permission android:name="com.bitdefender.security.CHECK_CLUEFUL_STATUS"/>
+    <permission android:name="com.bitdefender.security.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.bitdefender.security.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <application android:enabled="true" android:icon="@drawable/icon_launcher" android:label="@string/app_name_device_menu" android:name=".BDApplication">
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:name=".BDMain" android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <service android:exported="false" android:name=".antimalware.ScanService"/>
+        <service android:exported="false" android:name=".antimalware.ScanBackgroundService"/>
+        <receiver android:enabled="true" android:exported="false" android:name="com.bitdefender.scanner.ScanReceiver">
+            <intent-filter android:priority="2147483647">
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+            <intent-filter android:priority="2147483647">
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+            <intent-filter android:priority="2147483647">
+                <action android:name="android.intent.action.MEDIA_MOUNTED"/>
+                <data android:scheme="file"/>
+            </intent-filter>
+            <intent-filter android:priority="2147483647">
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.bitdefender.scanner.BDScanOnInstallService"/>
+        <service android:exported="false" android:name="com.bitdefender.scanner.BDScanOnMountService"/>
+        <activity android:name="net.hockeyapp.android.UpdateActivity"/>
+        <receiver android:exported="false" android:name=".antimalware.BDScanReceiver">
+            <intent-filter>
+                <action android:name="com.bitdefender.scanner.ON_INSTALL_SCAN_PROGRESS"/>
+                <action android:name="com.bitdefender.scanner.ON_INSTALL_SCAN_RESULT"/>
+                <action android:name="com.bitdefender.scanner.ON_MOUNT_SCAN_PROGRESS"/>
+                <action android:name="com.bitdefender.scanner.ON_MOUNT_SCAN_RESULT"/>
+                <action android:name="com.bitdefender.scanner.KATASTIF_RESULT"/>
+            </intent-filter>
+            <intent-filter android:priority="2147483647">
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+            <intent-filter android:priority="2147483647">
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name=".UpdateChecker">
+            <intent-filter>
+                <action android:name="com.bitdefender.security.action.CHECK_UPDATE"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.android.gms.analytics.CampaignTrackingService"/>
+        <receiver android:exported="true" android:name=".InstallReferrer">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="true" android:name=".RemoteService" android:permission="com.bitdefender.security.CHECK_STATUS">
+            <intent-filter>
+                <action android:name="com.bitdefender.security.CHECK_LICENSE"/>
+                <action android:name="com.bitdefender.security.CHECK_CLUEFUL_LICENSE"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.bitdefender.websecurity.WebSecurityService"/>
+        <receiver android:exported="false" android:name=".websecurity.WebSecurityReceiver">
+            <intent-filter>
+                <action android:name="com.bitdefender.websecurity.URL_SCAN_RESULT"/>
+            </intent-filter>
+        </receiver>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:name=".login.DeviceNameActivity" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:name=".login.LinkDeviceActivity" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:name=".login.LinkMyBDActivity" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:name=".login.LinkMyBDExistingActivity" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:name=".login.WelcomeActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:name=".antimalware.NotifyUserMalware" android:theme="@android:style/Theme.Dialog"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:name=".RegistrationActivity3" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:name=".PromoActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:name=".reports.ReportActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:excludeFromRecents="true" android:name=".RateDlg" android:theme="@android:style/Theme.Dialog"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:name=".websecurity.WebSecurityActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:finishOnTaskLaunch="true" android:launchMode="singleInstance" android:name=".websecurity.WebSecurityAlert" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:name=".antimalware.MalwareActivity" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:name=".AboutActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:name=".EulaActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:name=".login.ForgotPasswordActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:name=".login.CreateAccountActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <receiver android:exported="false" android:name=".AlarmReceiver">
+            <intent-filter>
+                <action android:name="com.bd.android.shared.WRONG_LOGIN"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.bd.android.shared.PENDING_ACCOUNT"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.bitdefender.security.reports.StatsAlarmReceiver">
+            <intent-filter>
+                <action android:name="com.bitdefender.security.CLEAR_STATS"/>
+                <action android:name="com.bitdefender.security.STATS_NOTIFICATION"/>
+            </intent-filter>
+        </receiver>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:name=".antitheft.InformationActivity" android:theme="@android:style/Theme.Dialog"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:name=".antitheft.WizzardActivity" android:theme="@android:style/Theme.Dialog"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:name=".antitheft.AntitheftActivityNew" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:name=".antitheft.BuddyActivity" android:theme="@android:style/Theme.Dialog"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:name=".antitheft.PasswordActivity" android:theme="@android:style/Theme.Dialog"/>
+        <service android:name="com.bitdefender.security.wear.WearReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.gms.wearable.BIND_LISTENER"/>
+            </intent-filter>
+        </service>
+        <activity android:excludeFromRecents="true" android:name="com.bitdefender.antitheft.sdk.ShowMessageActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <receiver android:enabled="true" android:exported="true" android:name="com.bitdefender.antitheft.sdk.SMSReceiver">
+            <intent-filter android:priority="2147483647">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.bitdefender.antitheft.sdk.CloudMessageManager"/>
+        <receiver android:description="@string/bd_sms_device_admin_description" android:name="com.bitdefender.antitheft.sdk.DeviceAdminStatusReceiver" android:permission="android.permission.BIND_DEVICE_ADMIN">
+            <meta-data android:name="android.app.device_admin" android:resource="@xml/device_admin"/>
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_DISABLED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_DISABLE_REQUESTED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.app.action.ACTION_PASSWORD_SUCCEEDED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.bitdefender.antitheft.sdk.GCMReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <category android:name="com.bitdefender.security"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.bd.android.shared.AlarmReceiver">
+            <intent-filter>
+                <action android:name="com.bd.android.shared.action.PRODUCT_LICENSE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.bd.android.shared.action.SDK_LICENSE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.bitdefender.antitheft.sdk.UninstallReceiver">
+            <intent-filter>
+                <action android:name="com.bitdefender.antitheft.sdk.action.UNINSTALL"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.bitdefender.antitheft.sdk.BDIntentService"/>
+        <service android:name="com.bitdefender.antitheft.sdk.GeoLocationService"/>
+        <service android:name="com.bitdefender.antitheft.sdk.UninstallWatcher"/>
+        <service android:name="com.bitdefender.antitheft.sdk.BateryStateService"/>
+        <service android:name="com.bitdefender.antitheft.sdk.DailyAlarmService"/>
+        <receiver android:exported="false" android:name=".applock.NotificationButtonClickReceiver">
+            <intent-filter>
+                <action android:name="com.bitdefender.antitheft.sdk.applock.LOCK"/>
+                <action android:name="com.bitdefender.antitheft.sdk.applock.DISABLE"/>
+                <action android:name="com.bitdefender.antitheft.sdk.applock.SHOW_DIALOG"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name=".applock.AppLockScanReceiver">
+            <intent-filter>
+                <action android:name="com.bitdefender.scanner.ON_INSTALL_SCAN_RESULT"/>
+            </intent-filter>
+            <intent-filter android:priority="2147483647">
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:name="com.bitdefender.antitheft.sdk.BDIntentReceiver">
+            <intent-filter android:priority="2147483647">
+                <action android:name="android.intent.action.PHONE_STATE"/>
+            </intent-filter>
+            <intent-filter android:priority="2147483647">
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+            <intent-filter android:priority="2147483647">
+                <action android:name="android.intent.action.SIM_STATE_CHANGED"/>
+            </intent-filter>
+            <intent-filter android:priority="2147483647">
+                <action android:name="android.intent.action.USER_PRESENT"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.bitdefender.antitheft.sdk.AutoAnswerService"/>
+        <receiver android:name="com.bitdefender.applock.sdk.PackageChanges">
+            <intent-filter android:priority="2147483646">
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <action android:name="android.intent.action.PACKAGE_REPLACED"/>
+                <action android:name="android.intent.action.PACKAGE_CHANGED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.bitdefender.security.ec.ECReceiver">
+            <intent-filter android:priority="2147483646">
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <activity android:configChanges="keyboardHidden" android:excludeFromRecents="true" android:name=".clueful.CluefulIntroActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden" android:excludeFromRecents="true" android:launchMode="singleTask" android:name=".clueful.AppsActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden" android:excludeFromRecents="true" android:name=".clueful.AppDetailsActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:name=".clueful.FilterDialog" android:theme="@android:style/Theme.Dialog"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:excludeFromRecents="true" android:name=".clueful.PrivacyDialog" android:theme="@android:style/Theme.Dialog"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:excludeFromRecents="true" android:name=".clueful.ScoreIncreasedDlg" android:theme="@android:style/Theme.Dialog"/>
+        <receiver android:name="com.bitdefender.clueful.sdk.AppInstallReceiver">
+            <intent-filter android:priority="2147483647">
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="NotificationCheckAlarmReceiver"/>
+        <service android:exported="true" android:name=".CluefulRemoteService" android:permission="com.bitdefender.security.CHECK_CLUEFUL_STATUS">
+            <intent-filter>
+                <action android:name="com.bitdefender.security.CHECK_CLUEFUL_LICENSE"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.bitdefender.clueful.sdk.CluefulService"/>
+        <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyAnRcHDcnOxMGh_F182QFrSnhrC7wD0oFk"/>
+        <meta-data android:name="com.google.android.wearable.beta.app" android:resource="@xml/wearable_app_desc"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:name=".applock.ApplockListActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:name=".applock.DialogAppLock" android:theme="@android:style/Theme.Dialog"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:name=".applock.AppLockSettingsActivity" android:theme="@android:style/Theme.Dialog"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:name=".wear.WearNewFeatureActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:name=".wear.WearSoundAlarmActivity" android:theme="@android:style/Theme.Dialog"/>
+        <service android:name="com.bitdefender.applock.sdk.PollingService"/>
+        <receiver android:name="com.bitdefender.applock.sdk.UserProfilesReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.ACTION_TIME_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="com.google.android.gms.analytics.globalConfigResource" android:resource="@xml/analytics"/>
+    </application>
+</manifest>

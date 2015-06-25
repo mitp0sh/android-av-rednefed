@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/extend_license" style="@style/PopupOverlayContainer"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/popup_header" layout="@layout/popup_header" />
+    <ScrollView android:id="@id/help_content_container" style="@style/PopupScrollContentContainer">
+        <LinearLayout android:gravity="center" android:layout_gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:id="@id/congrats_content" android:text="@string/congrats_success" style="@style/PopupContent" />
+            <Button android:id="@id/congrats_ok_btn" android:text="@string/congrats_ok" style="@style/BlackWideButton" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

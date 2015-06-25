@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:background="@drawable/header_bottom_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="50.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip">
+        <LinearLayout android:orientation="vertical" android:id="@id/filter_item_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip">
+            <LinearLayout android:gravity="center_vertical" android:id="@id/filter_header_no_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textAppearance="?android:textAppearanceLarge" android:textColor="@color/primary_text_light" android:id="@id/filter_header_no" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="@color/primary_text_light" android:textColorLink="@android:color/primary_text_light" android:id="@id/filter_header_apps" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:text="@string/apps" />
+            </LinearLayout>
+            <TextView android:id="@id/filter_item_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" android:text="TextView" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

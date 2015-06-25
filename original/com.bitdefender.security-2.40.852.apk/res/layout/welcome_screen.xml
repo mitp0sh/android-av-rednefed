@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/background_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/header" layout="@layout/header" />
+    <ImageView android:background="@drawable/background_pattern" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_below="@id/header">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/pattern" />
+                <ImageView android:id="@id/login_flow_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/login_image" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <TextView android:textAppearance="?android:textAppearanceLarge" android:textSize="30.0sp" android:textColor="@color/primary_text_white" android:id="@id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="@string/finish_screen_title" />
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:textSize="20.0sp" android:textColor="@color/primary_text_white" android:id="@id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/finish_screen_subtitle" />
+            <TextView android:textSize="@dimen/medium_text" android:textColor="@color/primary_text_white" android:gravity="center_horizontal" android:id="@id/textView3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/general_left_margin" android:layout_marginTop="30.0dip" android:layout_marginRight="@dimen/general_right_margin" android:text="@string/finish_screen_text1" />
+            <TextView android:textSize="@dimen/medium_text" android:textColor="@color/primary_text_light" android:gravity="center|left" android:id="@id/textView5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/finish_screen_text2" />
+            <Button android:id="@id/welcome_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/finish_screen_button" style="@style/GreenWideButton" />
+            <TextView android:textAppearance="?android:textAppearanceSmall" android:textColor="@color/primary_text_light" android:id="@id/textView4" android:layout_marginTop="10.0dip" android:text="@string/finish_screen_bottom_text" style="@style/MainText" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

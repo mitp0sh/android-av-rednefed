@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/tabla_cuerpo" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/promo_table_text1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/malware_scanner_title" android:drawableLeft="@drawable/malwarescanner_icon" style="@style/tableTextUpsell" />
+    <TextView android:id="@id/promo_table_text2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/privacy_advisor_title" android:drawableLeft="@drawable/privacyadvisor_icon" style="@style/tableTextUpsell" />
+    <TextView android:id="@id/promo_table_text3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/web_security_title" android:drawableLeft="@drawable/websecurity_icon" style="@style/tableTextUpsell" />
+    <TextView android:id="@id/promo_table_text4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/antitheft_title" android:drawableLeft="@drawable/antitheft_icon" style="@style/tableTextUpsell" />
+    <TextView android:id="@id/promo_table_text5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/applock_title" android:drawableLeft="@drawable/applock_icon" style="@style/tableTextUpsell" />
+</LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/appdetails_app_header_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:id="@id/appdetails_appname_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/app_details_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:src="@drawable/icon_privacyadvisor_titlebar" android:scaleType="fitCenter" android:adjustViewBounds="true" android:maxWidth="50.0dip" android:maxHeight="50.0dip" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip">
+                <RelativeLayout android:gravity="center" android:id="@id/appdetails_name_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/app_details_dot" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:src="@drawable/app_low" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/app_details_dot">
+                        <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/primary_text_white" android:id="@id/app_details_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/app_name" />
+                        <TextView android:textSize="@dimen/small_medium_text" android:textColor="@color/primary_text_light" android:id="@id/app_details_app_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <RelativeLayout android:gravity="center_vertical" android:id="@id/app_details_uninstall_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip">
+            <Button android:textColor="@color/primary_text_white" android:id="@id/appdetails_unistall" android:background="@drawable/uninstall_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/uninstall" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="?android:attr/buttonStyleSmall" />
+            <Button android:textColor="@color/primary_text_white" android:id="@id/appdetails_share" android:background="@drawable/share" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="?android:attr/buttonStyleSmall" />
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/appdetails_not_analyzed_layout" android:background="@drawable/bg_not_analyzed" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip">
+            <RelativeLayout android:id="@id/appdetails_analyze_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip">
+                <ImageView android:id="@id/appdetails_analyze_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/analyze" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                <Button android:textColor="@color/primary_text_white" android:id="@id/appdetails_analyze_button" android:background="@drawable/analyze_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/analyze" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="?android:attr/buttonStyleSmall" />
+                <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/primary_text_white" android:id="@id/appdetails_not_analyzed_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="2.0dip" android:text="@string/app_not_analyzed" android:layout_toLeftOf="@id/appdetails_analyze_button" android:layout_toRightOf="@id/appdetails_analyze_icon" android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <ImageView android:id="@id/imageView2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/header_loading1" android:scaleType="fitXY" android:adjustViewBounds="true" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:textSize="@dimen/medium_text" android:textStyle="bold" android:textColor="@color/primary_text_light" android:gravity="left" android:id="@id/appdetails_clues_header" android:background="@color/title_bar_color" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/appdetails_clues_header" android:layout_below="@id/appdetails_app_header_layout" />
+    <ScrollView android:id="@id/appdetails_scroll" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/appdetails_clues_header">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@id/clues_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:animateLayoutChanges="false" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:orientation="vertical" android:id="@id/appdetails_cover" android:background="@drawable/semitransparent_bckg" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</RelativeLayout>

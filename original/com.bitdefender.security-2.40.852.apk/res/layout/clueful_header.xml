@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/title_bar_color" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:id="@id/header_filter" android:background="@drawable/filter_button" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/general_right_margin" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="?android:attr/buttonStyleSmall" />
+    <TextView android:textSize="@dimen/medium_text" android:textColor="@color/primary_text_light" android:gravity="left" android:id="@id/header_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/privacy_advisor_title" android:layout_toLeftOf="@id/header_filter" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+</RelativeLayout>

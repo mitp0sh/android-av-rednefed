@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/title_bar_upsell_color" android:padding="@dimen/general_bottom_margin" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/b_logo" />
+    <TextView android:textSize="@dimen/medium_large_text" android:textColor="@color/primary_text_white" android:gravity="center" android:id="@id/header_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/promo_renew_title" android:layout_centerInParent="true" />
+</RelativeLayout>

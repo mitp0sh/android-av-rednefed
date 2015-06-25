@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/upsell_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/header" android:background="@color/title_bar_color" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/medium_large_text" android:textColor="@color/primary_text_white" android:gravity="center" android:id="@id/header_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/upsell_title_big" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/upsell_screen_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/header">
+        <android.support.v4.view.ViewPager android:id="@id/upsell_view_pager" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/upsell_page_counter" />
+        <LinearLayout android:id="@id/upsell_page_counter" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/extend_btns" style="@style/UpsellPageCounter">
+            <ImageView android:id="@id/upsell_page_1" android:clickable="false" style="@style/UpsellPageActive" />
+            <ImageView android:id="@id/upsell_page_2" android:clickable="false" style="@style/UpsellPageInactive" />
+            <ImageView android:id="@id/upsell_page_3" android:clickable="false" style="@style/UpsellPageInactive" />
+            <ImageView android:id="@id/upsell_page_4" android:clickable="false" style="@style/UpsellPageInactive" />
+            <ImageView android:id="@id/upsell_page_5" android:clickable="false" style="@style/UpsellPageInactive" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/extend_btns" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <Button android:id="@id/extend_license_market_offer" android:text="@string/upsell_subscription_1_year" android:layout_below="@id/promo_offer_img" style="@style/PromoGreenRedButton" />
+                <TextView android:id="@id/promo_offer_img" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/red_band_offer_subscription_1year" android:layout_alignRight="@id/extend_license_market_offer" style="@style/redBandPromo" />
+            </RelativeLayout>
+            <Button android:id="@id/extend_license_market_1_month" android:text="@string/upsell_subscription_1_month" style="@style/PromoGreenButton" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

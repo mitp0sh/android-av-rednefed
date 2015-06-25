@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditText android:enabled="false" android:textSize="20.0sp" android:textColor="@color/bd_at_sdk_pin_text_color" android:textColorHint="@color/bd_at_sdk_pin_hint_color" android:ellipsize="end" android:gravity="center" android:id="@id/password_field" android:layout_width="fill_parent" android:layout_margin="2.0dip" android:layout_marginBottom="@dimen/sdk_input_margin_bottom" android:hint="@string/bd_sms_password_hint" android:maxLines="1" android:singleLine="true" android:maxLength="8" android:layout_weight="3.0" android:inputType="numberPassword" android:imeOptions="actionDone" style="@style/SDKPinInput" />
+    <TableLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TableRow android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="3.0">
+            <Button android:id="@id/key_1" android:text="1" style="@style/SDKLockScreenKey" />
+            <Button android:id="@id/key_2" android:text="2" style="@style/SDKLockScreenKey" />
+            <Button android:id="@id/key_3" android:text="3" style="@style/SDKLockScreenKey" />
+        </TableRow>
+        <TableRow android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="3.0">
+            <Button android:id="@id/key_4" android:text="4" style="@style/SDKLockScreenKey" />
+            <Button android:id="@id/key_5" android:text="5" style="@style/SDKLockScreenKey" />
+            <Button android:id="@id/key_6" android:text="6" style="@style/SDKLockScreenKey" />
+        </TableRow>
+        <TableRow android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="3.0">
+            <Button android:id="@id/key_7" android:text="7" style="@style/SDKLockScreenKey" />
+            <Button android:id="@id/key_8" android:text="8" style="@style/SDKLockScreenKey" />
+            <Button android:id="@id/key_9" android:text="9" style="@style/SDKLockScreenKey" />
+        </TableRow>
+        <TableRow android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="3.0">
+            <LinearLayout android:id="@id/password_cancel" android:background="@drawable/sdk_btn_cancel_states" android:text="" style="@style/SDKLockScreenKey">
+                <ImageView android:layout_width="wrap_content" android:layout_height="18.0sp" android:src="@drawable/symbol_cancel" />
+            </LinearLayout>
+            <Button android:id="@id/key_0" android:text="0" style="@style/SDKLockScreenKey" />
+            <LinearLayout android:id="@id/key_del" android:text="" style="@style/SDKLockScreenKey">
+                <ImageView android:layout_width="wrap_content" android:layout_height="18.0sp" android:src="@drawable/symbol_del" />
+            </LinearLayout>
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

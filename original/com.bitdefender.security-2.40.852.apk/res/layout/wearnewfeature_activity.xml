@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/relativeLayoutEventActivity" android:background="@color/background_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/header" layout="@layout/header" />
+    <ImageView android:background="@drawable/background_pattern" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/wear_new_feature_ok" android:layout_below="@id/header">
+        <ScrollView android:scrollbarStyle="outsideOverlay" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_left_margin" android:layout_centerVertical="true">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/wear_watch" />
+                <TextView android:textSize="@dimen/xlarge_text" android:textColor="@color/primary_text_white" android:layout_marginTop="-75.0dip" android:text="@string/wear_title" style="@style/WearText" />
+                <TextView android:textColor="@color/primary_text_light" android:layout_marginTop="16.0dip" android:text="@string/wear_activity_new_feature_description" style="@style/WearText" />
+                <TextView android:textSize="@dimen/medium_large_text" android:textColor="@color/primary_text_white" android:layout_marginTop="16.0dip" android:text="@string/wear_activity_new_feature_subtitle" style="@style/WearText" />
+                <TextView android:layout_marginTop="8.0dip" android:text="@string/wear_activity_new_feature_content1" style="@style/WearText" />
+                <TextView android:layout_marginTop="8.0dip" android:text="@string/wear_activity_new_feature_content2" style="@style/WearText" />
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+    <Button android:id="@id/wear_new_feature_ok" android:layout_height="wrap_content" android:text="@string/wear_activity_new_feature_btn" android:layout_alignParentBottom="true" style="@style/GreenWideButton" />
+</RelativeLayout>

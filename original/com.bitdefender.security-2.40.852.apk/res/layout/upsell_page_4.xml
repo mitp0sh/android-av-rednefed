@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/upsell_title_4" android:text="@string/web_security_title" style="@style/UpsellTitle" />
+        <ImageView android:src="@drawable/upsell_4" style="@style/UpsellImage" />
+        <TextView android:id="@id/upsell_content_4" android:text="@string/upsell_content_4" style="@style/UpsellContent" />
+    </LinearLayout>
+</ScrollView>

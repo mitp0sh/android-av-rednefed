@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_horizontal" android:id="@id/autopilot" android:paddingLeft="@dimen/general_left_margin" android:paddingTop="@dimen/autopilot_margin_top_bottom" android:paddingRight="@dimen/general_right_margin" android:paddingBottom="@dimen/autopilot_margin_top_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/autopit_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_autopilot" android:layout_centerVertical="true" />
+    <TextView android:textSize="@dimen/medium_text" android:textColor="@color/primary_text_white" android:id="@id/autopit_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/autopilot_margin_top_bottom" android:text="@string/autopilot_title" android:layout_toRightOf="@id/autopit_icon" />
+    <TextView android:textSize="@dimen/small_text" android:textColor="@color/text_gray" android:id="@id/autopit_subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/autopilot_margin_top_bottom" android:text="@string/autopilot_subtitle" android:layout_toRightOf="@id/autopit_icon" android:layout_below="@id/autopit_title" />
+</RelativeLayout>

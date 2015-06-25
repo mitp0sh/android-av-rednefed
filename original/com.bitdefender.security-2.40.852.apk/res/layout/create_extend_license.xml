@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/extend_license" android:background="@color/upsell_background" android:layout_width="@dimen/popup_dialog_min_width" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/header" layout="@layout/promo_upgrade_header" />
+    <LinearLayout android:orientation="vertical" android:layout_width="@dimen/popup_dialog_min_width" android:layout_height="wrap_content" android:layout_below="@id/header">
+        <TextView android:id="@id/extend_license_content" android:text="@string/RegistrationActivity_extend_dialog_content" style="@style/PromoTextContent" />
+        <LinearLayout android:orientation="vertical" android:id="@id/extend_btns" android:layout_width="@dimen/popup_dialog_min_width" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@id/extend_license_content_offer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="5.0dip">
+                <Button android:id="@id/extend_license_market_offer" android:layout_width="fill_parent" android:text="@string/registration_upgrade_dialog_trial_2years" android:layout_below="@id/promo_offer_img" style="@style/PromoGreenRedButton" />
+                <TextView android:id="@id/promo_offer_img" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/red_band_offer_special" android:layout_alignRight="@id/extend_license_market_offer" style="@style/redBandPromo" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/extend_license_content_subscription_1y" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="5.0dip">
+                <Button android:id="@id/extend_license_market_1year" android:layout_width="fill_parent" android:text="@string/upsell_subscription_1_year" android:layout_below="@id/promo_offer_img2" style="@style/PromoGreenRedButton" />
+                <TextView android:id="@id/promo_offer_img2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/red_band_offer_subscription_1year" android:layout_alignRight="@id/extend_license_market_1year" style="@style/redBandPromo" />
+            </RelativeLayout>
+            <Button android:id="@id/extend_license_market_1_month" android:layout_width="fill_parent" android:layout_marginTop="8.0dip" android:layout_marginBottom="5.0dip" android:text="@string/upsell_subscription_1_month" style="@style/PromoGreenButton" />
+            <View style="@style/SeparatorHorizontalEmpty" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

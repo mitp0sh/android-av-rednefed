@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/help_dialog" style="@style/PopupOverlayContainer"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/popup_header" layout="@layout/popup_header" />
+    <ScrollView android:id="@id/help_content_container" style="@style/PopupScrollContentContainer">
+        <LinearLayout android:gravity="center" android:layout_gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@id/lockscreen_delay_container" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:text="@string/lockscreen_delay_description" android:layout_toLeftOf="@id/lockscreen_delay_button" style="@style/RegistrationTextItem" />
+                <com.bitdefender.security.ui.BDToggleButton android:id="@id/lockscreen_delay_button" style="@style/ToggleOnOff" />
+            </RelativeLayout>
+            <View style="@style/SeparatorHorizontalSimple" />
+            <RelativeLayout android:id="@id/lockscreen_notification_container" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:text="@string/lockscreen_notification_description" android:layout_toLeftOf="@id/lockscreen_notification_button" style="@style/RegistrationTextItem" />
+                <com.bitdefender.security.ui.BDToggleButton android:id="@id/lockscreen_notification_button" style="@style/ToggleOnOff" />
+            </RelativeLayout>
+            <View style="@style/SeparatorHorizontalSimple" />
+            <Button android:id="@id/change_pin_button" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:text="@string/registration_button_password_change" style="@style/BlackWideButton" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

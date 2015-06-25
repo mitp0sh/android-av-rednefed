@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/preview_sms_locate_content" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/preview_sms_locate_icon" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/preview_locate" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/general_left_margin" android:layout_marginRight="@dimen/general_right_margin" android:layout_toLeftOf="@id/preview_sms_arrow" android:layout_toRightOf="@id/preview_sms_locate_icon">
+            <TextView android:textSize="15.0sp" android:textStyle="bold" android:textColor="@color/primary_text_white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="LOCATE" />
+            <TextView android:id="@id/preview_sms_locate" android:text="@string/preview_sms_locate" style="@style/PreviewTextSMSCommandsAntitheft" />
+        </LinearLayout>
+        <ImageView android:id="@id/preview_sms_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/next" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <View style="@style/SeparatorHorizontalSimple" />
+    <RelativeLayout android:id="@id/preview_sms_scream_content" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/preview_sms_scream_icon" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/preview_scream" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/general_left_margin" android:layout_marginRight="@dimen/general_right_margin" android:layout_toLeftOf="@id/preview_sms_arrow1" android:layout_toRightOf="@id/preview_sms_scream_icon">
+            <TextView android:textSize="15.0sp" android:textStyle="bold" android:textColor="@color/primary_text_white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="SCREAM" />
+            <TextView android:id="@id/preview_sms_scream" android:text="@string/preview_sms_scream" style="@style/PreviewTextSMSCommandsAntitheft" />
+        </LinearLayout>
+        <ImageView android:id="@id/preview_sms_arrow1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/next" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <View style="@style/SeparatorHorizontalSimple" />
+    <RelativeLayout android:id="@id/preview_sms_lock_content" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/preview_sms_lock_icon" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/preview_lock" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/general_left_margin" android:layout_marginRight="@dimen/general_right_margin" android:layout_toLeftOf="@id/preview_sms_arrow2" android:layout_toRightOf="@id/preview_sms_lock_icon">
+            <TextView android:textSize="15.0sp" android:textStyle="bold" android:textColor="@color/primary_text_white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="LOCK" />
+            <TextView android:id="@id/preview_sms_lock" android:text="@string/preview_sms_lock" style="@style/PreviewTextSMSCommandsAntitheft" />
+        </LinearLayout>
+        <ImageView android:id="@id/preview_sms_arrow2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/next" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <View style="@style/SeparatorHorizontalSimple" />
+    <RelativeLayout android:id="@id/preview_sms_wipe_content" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/preview_sms_wipe_icon" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/preview_wipe" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/general_left_margin" android:layout_marginRight="@dimen/general_right_margin" android:layout_toLeftOf="@id/preview_sms_arrow3" android:layout_toRightOf="@id/preview_sms_wipe_icon">
+            <TextView android:textSize="15.0sp" android:textStyle="bold" android:textColor="@color/primary_text_white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="WIPE" />
+            <TextView android:id="@id/preview_sms_wipe" android:text="@string/preview_sms_wipe" style="@style/PreviewTextSMSCommandsAntitheft" />
+        </LinearLayout>
+        <ImageView android:id="@id/preview_sms_arrow3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/next" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <View style="@style/SeparatorHorizontalSimple" />
+    <RelativeLayout android:id="@id/preview_sms_callme_content" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/preview_sms_callme_icon" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/preview_callme" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/general_left_margin" android:layout_marginRight="@dimen/general_right_margin" android:layout_toLeftOf="@id/preview_sms_arrow4" android:layout_toRightOf="@id/preview_sms_callme_icon">
+            <TextView android:textSize="15.0sp" android:textStyle="bold" android:textColor="@color/primary_text_white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="CALLME" />
+            <TextView android:id="@id/preview_sms_callme" android:text="@string/preview_sms_callme" style="@style/PreviewTextSMSCommandsAntitheft" />
+        </LinearLayout>
+        <ImageView android:id="@id/preview_sms_arrow4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/next" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <View style="@style/SeparatorHorizontalSimple" />
+    <RelativeLayout android:id="@id/preview_sms_answer_content" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/preview_sms_answer_icon" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/preview_answer" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/general_left_margin" android:layout_marginRight="@dimen/general_right_margin" android:layout_toLeftOf="@id/preview_sms_arrow5" android:layout_toRightOf="@id/preview_sms_answer_icon">
+            <TextView android:textSize="15.0sp" android:textStyle="bold" android:textColor="@color/primary_text_white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="ANSWER" />
+            <TextView android:id="@id/preview_sms_answer" android:text="@string/preview_sms_answer" style="@style/PreviewTextSMSCommandsAntitheft" />
+        </LinearLayout>
+        <ImageView android:id="@id/preview_sms_arrow5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/next" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <View style="@style/SeparatorHorizontalSimple" />
+    <RelativeLayout android:id="@id/preview_sms_help_content" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/preview_sms_help_icon" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/preview_help" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/general_left_margin" android:layout_marginRight="@dimen/general_right_margin" android:layout_toLeftOf="@id/preview_sms_arrow6" android:layout_toRightOf="@id/preview_sms_help_icon">
+            <TextView android:textSize="15.0sp" android:textStyle="bold" android:textColor="@color/primary_text_white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="HELP" />
+            <TextView android:id="@id/preview_sms_help" android:text="@string/preview_sms_help" style="@style/PreviewTextSMSCommandsAntitheft" />
+        </LinearLayout>
+        <ImageView android:id="@id/preview_sms_arrow6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/next" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</LinearLayout>

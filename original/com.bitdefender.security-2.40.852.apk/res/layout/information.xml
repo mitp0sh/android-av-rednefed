@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout style="@style/PopupOverlayContainer"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@id/popup_header" android:background="@drawable/notif_grey_header" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="@dimen/popup_dialog_min_width">
+        <ImageView android:id="@id/popup_header_image" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:textSize="@dimen/large_text" android:textColor="@color/primary_text_white" android:id="@id/popup_header_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/main_screen_activate_button" />
+    </LinearLayout>
+    <ScrollView style="@style/PopupScrollContentContainer">
+        <LinearLayout android:gravity="center" android:layout_gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:id="@id/information_text" android:text="@string/information_device_admin_needed" style="@style/PopupContent" />
+            <TextView android:textStyle="bold" android:gravity="center_horizontal" android:id="@id/information_text_extra" android:text="@string/information_device_admin_extra" style="@style/PopupContent" />
+            <Button android:id="@id/information_btn_ok" android:text="@string/information_btn_ok" style="@style/GreenWideButton" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

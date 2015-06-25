@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/background_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/header" layout="@layout/header" />
+    <ImageView android:background="@drawable/background_pattern" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/header">
+        <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_above="@id/activate_button_container">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="100.0">
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="50.0">
+                    <ImageView android:id="@id/main_web_controls_icon" android:src="@drawable/main_at_nok" style="@style/MainIcon" />
+                    <TextView android:id="@id/main_web_controls_text" android:text="@string/main_web_controls_not_configured" style="@style/MainText" />
+                </LinearLayout>
+                <View style="@style/SeparatorHorizontalSimple" />
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="50.0">
+                    <ImageView android:id="@id/main_sms_icon" android:src="@drawable/main_sms_nok" style="@style/MainIcon" />
+                    <TextView android:id="@id/main_sms_text" android:text="@string/main_sms_controls_not_configured" style="@style/MainText" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+        <LinearLayout android:orientation="vertical" android:id="@id/activate_button_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <View style="@style/SeparatorHorizontalSimple" />
+            <Button android:id="@id/main_screen_activate" android:layout_margin="10.0dip" android:text="@string/main_screen_activate_button" style="@style/GreenWideButton" />
+            <View style="@style/SeparatorHorizontalSimple" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>
